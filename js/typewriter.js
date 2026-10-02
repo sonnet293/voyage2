@@ -38,12 +38,22 @@
     let cursor = null;
 
     const finish = () => {
-        cancelAnimationFrame(frame);
-        for (const { span } of sequence) span.classList.add('is-visible');
+    cancelAnimationFrame(frame);
+
+    for (const { span } of sequence) {
+        span.classList.add('is-visible');
+    }
+
+    // 마지막 글자에 커서를 유지
+    if (sequence.length) {
         cursor?.classList.remove('is-cursor');
-        motion.removeEventListener('change', onMotionChange);
-        window.removeEventListener('pagehide', finish);
-    };
+        cursor = sequence[sequence.length - 1].span;
+        cursor.classList.add('is-visible', 'is-cursor');
+    }
+
+    motion.removeEventListener('change', onMotionChange);
+    window.removeEventListener('pagehide', finish);
+};
     const onMotionChange = () => { if (motion.matches) finish(); };
     const tick = now => {
         started ??= now;
