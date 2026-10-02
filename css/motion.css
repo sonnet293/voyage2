@@ -1,4 +1,14 @@
 /* Decorative motion only. Opt in when the user has not requested reduced motion. */
+/* Extra image coverage keeps the edges filled during the small pointer drift. */
+body[data-space-parallax]::before {
+  inset: -18px;
+  transform: translate3d(var(--space-x, 0px), var(--space-y, 0px), 0);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  body[data-space-parallax]::before { inset: 0; transform: none; will-change: auto; }
+}
+
 .main-head.has-typewriter { animation: none; }
 .typewriter-accessible {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
