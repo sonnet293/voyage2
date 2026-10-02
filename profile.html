@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAINER CARD · VOYAGER</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="profile-page">
+    <header class="station-header">
+        <a class="brand" href="main.html"><span class="brand-mark" aria-hidden="true">V</span><span>VOYAGER<small>ORBITAL BATTLE STATION</small></span></a>
+        <nav class="station-nav" aria-label="메인 메뉴"><a href="main.html">COMMAND CENTER</a><a href="profile.html" aria-current="page">TRAINER CARD</a></nav>
+    </header>
+    <div class="profile-wrap">
+        <div class="profile-heading">
+            <div><span class="eyebrow">CREW DATABASE / PERSONAL RECORD</span><h1>TRAINER CARD</h1><p class="muted">나의 트레이너 프로필과 배틀 파티.</p></div>
+            <a class="btn btn-ghost profile-back" href="main.html">← 배틀룸으로</a>
+        </div>
+
+    <main class="trainer-card panel" id="trainer-card" aria-label="트레이너 프로필">
+        <!-- 좌측 40%: 프로필 사진 -->
+        <section class="card-left">
+            <div class="card-label">TRAINER CARD</div>
+            <label class="avatar" id="avatar" for="avatar-input" title="클릭해서 프로필 사진 변경" tabindex="0" role="button" aria-label="프로필 사진 변경">
+                <img id="avatar-img" alt="트레이너 프로필 사진" hidden>
+                <span class="avatar-placeholder" id="avatar-placeholder"><span class="avatar-symbol" aria-hidden="true">＋</span><strong>사진 추가</strong><span>나만의 프로필을 꾸며보세요</span></span>
+                <span class="avatar-edit" aria-hidden="true">사진 변경 ↗</span>
+                <span class="avatar-uploading" id="avatar-uploading" role="status" hidden>업로드 중…</span>
+                <input type="file" id="avatar-input" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+            </label>
+            <div class="trainer-identity"><span class="trainer-caption">REGISTERED TRAINER</span><h2 class="trainer-name" id="trainer-name">트레이너</h2><p class="avatar-help">사진을 눌러 프로필을 변경하세요.<br>PNG · JPG · WEBP · GIF / 최대 10MB</p></div>
+            <p class="card-message" id="card-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <!-- 우측 60%: 포켓몬 3 x 2 -->
+        <section class="card-right" aria-labelledby="party-title">
+            <header class="party-heading"><div><span class="eyebrow">MY PARTNERS / 06 SLOTS</span><h2 id="party-title">배틀 파티</h2></div><span class="party-count" id="party-count">0 / 6</span></header>
+            <div class="party-grid" id="party-grid" aria-label="파트너 포켓몬">
+                <div class="slot loading-slot"><span class="slot-no">01</span><span class="slot-loading-art" aria-hidden="true"></span><span>불러오는 중</span></div>
+                <div class="slot loading-slot"><span class="slot-no">02</span><span class="slot-loading-art" aria-hidden="true"></span><span>불러오는 중</span></div>
+                <div class="slot loading-slot"><span class="slot-no">03</span><span class="slot-loading-art" aria-hidden="true"></span><span>불러오는 중</span></div>
+                <div class="slot loading-slot"><span class="slot-no">04</span><span class="slot-loading-art" aria-hidden="true"></span><span>불러오는 중</span></div>
+                <div class="slot loading-slot"><span class="slot-no">05</span><span class="slot-loading-art" aria-hidden="true"></span><span>불러오는 중</span></div>
+                <div class="slot loading-slot"><span class="slot-no">06</span><span class="slot-loading-art" aria-hidden="true"></span><span>불러오는 중</span></div>
+            </div>
+            <p class="party-help">빈 슬롯을 눌러 파트너를 추가하세요.<br>등록된 파트너는 카드를 눌러 변경할 수 있어요.</p>
+        </section>
+    </main>
+    </div>
+
+    <!-- 포켓몬 검색 모달 -->
+    <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
+        <div class="search-intro"><span class="eyebrow">FIND YOUR PARTNER</span><h2 id="search-title">포켓몬 추가</h2></div>
+        <div class="search-head">
+            <input type="search" id="search-input" aria-label="포켓몬 이름 또는 도감 번호" placeholder="포켓몬 이름 또는 도감 번호" autocomplete="off">
+            <form method="dialog"><button class="search-close" value="cancel" aria-label="닫기">✕</button></form>
+        </div>
+        <div class="search-results" id="search-results" aria-live="polite"></div>
+    </dialog>
+
+    <footer class="station-footer"><span>PROJECT : VOYAGER</span><span>CREW DATABASE / TRAINER RECORD</span></footer>
+    <script type="module" src="js/profile.js"></script>
+
+</body>
+</html>

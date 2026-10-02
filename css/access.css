@@ -1,0 +1,27 @@
+.access-page { display: flex; flex-direction: column; }
+.access-page .station-header { flex: none; }
+.access-layout { width: min(1120px, calc(100% - 96px)); flex: 1; margin: 64px auto 20px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 90px; align-items: center; }
+.access-intro h1 { margin: 24px 0; font-size: clamp(46px, 5.8vw, 78px); line-height: 1.05; letter-spacing: -.045em; font-weight: 800; }
+.access-intro h1 em { color: var(--accent); font-style: normal; }
+.intro-copy { color: var(--muted); line-height: 1.9; font-size: 14px; }
+.access-panel { position: relative; padding: 38px; border-top: 2px solid var(--accent); }
+.panel-topline { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; color: var(--muted); font: 9px var(--mono); letter-spacing: .1em; }
+.signal-bars { color: var(--accent); }
+.access-panel h2 { font-size: 27px; margin: 12px 0; letter-spacing: -.04em; }
+.access-panel > .muted { font-size: 12px; }
+.login-form { display: grid; gap: 22px; margin-top: 30px; }
+.field { display: grid; gap: 9px; }
+.field > span { color: #c8d7e2; font: 10px var(--mono); letter-spacing: .12em; }
+.field small { margin-left: 8px; color: var(--muted); letter-spacing: 0; font-family: var(--font); }
+.login-form .btn { width: 100%; margin-top: 6px; min-height: 50px; }
+.form-message { margin: 0; color: #ffab9a; font-size: 12px; min-height: 20px; }
+.terminal-note { display: flex; gap: 10px; justify-content: center; border-top: 1px solid var(--line); padding-top: 22px; margin-top: 22px; font: 9px var(--mono); letter-spacing: .08em; color: var(--muted); }
+.terminal-note span { color: var(--accent); }
+.orbit-diagram { position: relative; width: 180px; height: 110px; margin-top: 35px; display: grid; place-items: center; }
+.orbit-ring { position: absolute; width: 160px; height: 70px; border: 1px solid #70ebd547; border-radius: 50%; transform: rotate(-24deg); }
+.orbit-ring::after { content: ""; position: absolute; inset: -20px 30px; border: 1px solid #70ebd526; border-radius: 50%; transform: rotate(75deg); }
+.orbit-core { width: 37px; height: 37px; display: grid; place-items: center; border: 1px solid var(--accent); color: var(--accent); font-size: 20px; transform: rotate(45deg); background: #091e28; }
+.orbit-node { position: absolute; top: 24px; right: 22px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 20px var(--accent); }
+.orbit-caption { position: absolute; bottom: -15px; font: 8px var(--mono); letter-spacing: .1em; color: var(--muted); }
+@media (max-width: 900px) { .access-layout { gap: 35px; grid-template-columns: 1fr 1fr; } .access-panel { padding: 28px; } }
+@media (max-width: 700px) { .access-layout { grid-template-columns: 1fr; width: calc(100% - 36px); margin-top: 38px; } .access-intro h1 { font-size: clamp(44px, 10vw, 68px); } .orbit-diagram { display: none; } .access-panel { max-width: 480px; width: 100%; justify-self: center; } .panel-topline { margin-bottom: 28px; } }

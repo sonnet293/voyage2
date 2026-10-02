@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMAND CENTER</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="command-page">
+    <header class="station-header">
+        <a class="brand" href="main.html"><span class="brand-mark" aria-hidden="true">V</span><span>VOYAGER<small>ORBITAL BATTLE STATION</small></span></a>
+        <nav class="station-nav" aria-label="메인 메뉴"><a href="main.html" aria-current="page">COMMAND CENTER</a><a href="profile.html">TRAINER CARD</a></nav>
+        <div class="header-account">
+
+    <a href="profile.html" class="trainer-chip" title="트레이너 카드">
+        <span id="trainer-initial" class="initial"></span>
+        <span id="trainer-name" class="label">트레이너</span>
+    </a>
+    <button type="button" id="logoutBtn">DISCONNECT</button>
+        </div>
+    </header>
+
+    <main class="main-wrap">
+        <div class="main-head">
+            <div>
+                <span class="eyebrow" data-typewriter data-typewriter-speed="32">STATION 01 / COMMAND CENTER</span>
+                <h1 data-typewriter data-typewriter-speed="65">BATTLE SIGNAL</h1>
+                <p class="muted" data-typewriter data-typewriter-speed="36">시뮬레이션 챔버를 선택하고, 다음 배틀에 접속하세요.</p>
+            </div>
+            <div id="room-summary" class="room-summary"></div>
+        </div>
+        <script src="js/typewriter.js"></script>
+
+        <section class="sector-banner panel"><div><span class="eyebrow">SIMULATION DECK</span><h2>다음 배틀을 위한 도킹 포인트.</h2><p>열린 챔버에 참가하거나 진행 중인 배틀을 관전하세요.</p></div><div class="deck-map" aria-hidden="true"><span>01</span><i></i><span>02</span><i></i><span>03</span></div></section>
+        <div class="section-label"><h2>SIMULATION CHAMBERS</h2><span>SELECT YOUR DESTINATION</span></div>
+        <div id="room-grid" class="room-grid" aria-label="배틀룸 목록"></div>
+        <div class="deck-notes"><span><b>01</b> 챔버 입장</span><span><b>02</b> 트레이너 준비</span><span><b>03</b> 배틀 시작</span></div>
+    </main>
+    <footer class="station-footer"><span>PROJECT : VOYAGER</span><span>SIMULATION DECK / 01—03</span></footer>
+
+    <script type="module" src="js/main.js"></script>
+    
+</body>
+</html>

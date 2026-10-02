@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT : VOYAGER ACCESS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="access-page">
+    <header class="station-header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">V</span><span>VOYAGER<small>ORBITAL BATTLE STATION</small></span></a>
+        <span class="system-label"><i></i> STATION ACCESS</span>
+    </header>
+    <main class="access-layout">
+        <section class="access-intro">
+            <p class="eyebrow">BEYOND THE HORIZON / PROJECT 01</p>
+            <h1>YOUR NEXT<br>BATTLE IS<br><em>OUT THERE.</em></h1>
+            <p class="intro-copy">무한한 우주, 새로운 배틀의 시작.<br>보이저 스테이션에서 당신의 다음 상대를 만나세요.</p>
+            <div class="orbit-diagram" aria-hidden="true"><div class="orbit-ring"></div><span class="orbit-core">V</span><span class="orbit-node"></span><span class="orbit-caption">VOYAGER / ORBITAL LINK</span></div>
+        </section>
+        <section class="access-panel panel" aria-labelledby="access-title">
+            <div class="panel-topline"><span>01 / ACCESS TERMINAL</span><span class="signal-bars" aria-hidden="true">▂▄▆█</span></div>
+            <span class="eyebrow">WELCOME ABOARD</span>
+            <h2 id="access-title">스테이션 접속</h2>
+            <p class="muted">트레이너 계정으로 배틀 시스템에 연결하세요.</p>
+
+    <form id="loginForm" class="login-form">
+        <label class="field">
+            <span>EMAIL <small>이메일</small></span>
+            <input type="email" id="email" placeholder="trainer@example.com" autocomplete="email" required />
+        </label>
+        <label class="field">
+            <span>PASSWORD <small>비밀번호</small></span>
+            <input type="password" id="password" placeholder="비밀번호를 입력하세요" autocomplete="current-password" required />
+        </label>
+        <button type="submit" id="loginBtn" class="btn btn-primary">CONNECT →</button>
+        <p id="message" class="form-message" role="alert"></p>
+    </form>
+            <div class="terminal-note"><span aria-hidden="true">⌁</span> AUTHORIZED TRAINERS ONLY</div>
+        </section>
+    </main>
+    <footer class="station-footer"><span>PROJECT : VOYAGER</span><span>ACCESS GATE / 01</span></footer>
+
+    <script type="module" src="js/login.js"></script>
+    
+</body>
+</html>

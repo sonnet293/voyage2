@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMULATION CHAMBER 2 · VOYAGER</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lobby-page">
+    <header class="station-header">
+        <a class="brand" href="../main.html"><span class="brand-mark" aria-hidden="true">V</span><span>VOYAGER<small>ORBITAL BATTLE STATION</small></span></a>
+        <span class="system-label"><i></i> SIMULATION DECK / 02</span>
+    </header>
+    <main class="lobby">
+        <section class="lobby-hero" id="lobby-hero">
+            <span class="status-pill" id="room-status" data-status="waiting" role="status"><i></i><span>불러오는 중</span></span>
+            <span class="eyebrow">ROOM 02 / DOCKING LOBBY</span>
+            <h1 id="room-name">SIMULATION CHAMBER 2</h1>
+            <p>트레이너 연결을 확인하고 배틀을 준비하세요.</p>
+        </section>
+        <div id="swap-status" class="swap-banner" role="status" hidden></div>
+        <section class="versus" aria-label="참가 트레이너">
+            <article id="player1" class="player-card" data-state="empty"><span class="player-slot">PLAYER 1</span><div class="player-avatar" aria-hidden="true">?</div><strong class="player-name">연결 대기</strong></article>
+            <div class="versus-mark" aria-hidden="true">VS</div>
+            <article id="player2" class="player-card" data-state="empty"><span class="player-slot">PLAYER 2</span><div class="player-avatar" aria-hidden="true">?</div><strong class="player-name">연결 대기</strong></article>
+        </section>
+        <p id="lobby-hint" class="lobby-hint" role="status">배틀룸 정보를 불러오는 중입니다.</p>
+        <section class="spectators" aria-label="관전자">
+            <header><h2>관전자</h2><span class="count-badge" id="spectator-count">0</span></header>
+            <ul id="spectator-list" class="spectator-list"></ul>
+        </section>
+    </main>
+    <footer class="lobby-actions">
+        <button type="button" id="leaveBtn" class="btn btn-ghost">LEAVE</button>
+        <button type="button" id="readyBtn" class="btn btn-primary" aria-pressed="false" hidden>READY</button>
+    </footer>
+    <div class="station-footer"><span>PROJECT : VOYAGER</span><span>DOCKING LOBBY / 02</span></div>
+    <script>const ROOM_ID = "battleroom2";</script>
+    <script type="module" src="../js/battleroom.js"></script>
+</body>
+</html>

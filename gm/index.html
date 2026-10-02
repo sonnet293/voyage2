@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STATION CONTROL · VOYAGER</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-page">
+    <header class="station-header">
+        <a class="brand" href="../main.html"><span class="brand-mark" aria-hidden="true">V</span><span>VOYAGER<small>ORBITAL BATTLE STATION</small></span></a>
+        <span class="system-label"><i></i> GM TERMINAL</span>
+    </header>
+    <main class="admin-wrap">
+        <span class="eyebrow">RESTRICTED ACCESS / STATION CONTROL</span>
+        <h1>서버 로그</h1>
+        <div id="gm-login" class="panel">
+            <label for="gm-email">GM 이메일<input id="gm-email" type="email" placeholder="GM 이메일" autocomplete="username"></label>
+            <label for="gm-password">비밀번호<input id="gm-password" type="password" placeholder="비밀번호" autocomplete="current-password"></label>
+            <button id="gm-login-btn">CONNECT →</button>
+            <div id="gm-login-msg" role="alert"></div>
+        </div>
+        <div id="gm-panel" class="panel">
+            <p>GM UID: <span id="gm-uid"></span> <button id="gm-logout-btn">DISCONNECT</button></p>
+            <p class="notice">이 창이 열려 있는 동안에만 게임이 진행됩니다. 별도 창으로 띄워 두세요.</p>
+            <h3>SIMULATION CHAMBERS / 방</h3>
+            <div id="gm-rooms"></div>
+            <h3>SYSTEM LOG / 처리 로그</h3>
+            <div id="gm-log" role="log"></div>
+        </div>
+    </main>
+    <footer class="station-footer"><span>PROJECT : VOYAGER</span><span>STATION CONTROL / GM</span></footer>
+    <script type="module" src="./gm.js"></script>
+</body>
+</html>

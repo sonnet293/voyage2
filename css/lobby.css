@@ -1,0 +1,40 @@
+.lobby { width: min(1000px, calc(100% - 96px)); margin: 38px auto 0; }
+.lobby-hero { position: relative; padding: 40px; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: linear-gradient(90deg, #0a1c2ee6, #09132299), var(--room-bg, url("../img/nebula.jpg")) center / cover; }
+.lobby-hero .status-pill { float: right; }
+.lobby-hero h1 { font-size: clamp(24px, 4vw, 40px); margin: 14px 0; letter-spacing: -.025em; }
+.lobby-hero p { margin: 0; font-size: 13px; color: var(--muted); }
+.versus { display: grid; grid-template-columns: 1fr 80px 1fr; align-items: center; margin-top: 26px; }
+.player-card { position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; min-height: 280px; justify-content: center; padding: 28px; border: 1px solid var(--line); background: var(--panel); border-radius: 5px; }
+.player-card[data-state="empty"] { border-style: dashed; }
+.player-card[data-state="ready"] { border-color: var(--accent); box-shadow: inset 0 0 40px #70ebd507; }
+.player-card[data-me="true"]::after { content: "YOU"; position: absolute; top: 18px; right: 18px; color: var(--accent); font: 9px var(--mono); }
+.player-slot { color: var(--muted); font: 10px var(--mono); letter-spacing: .12em; }
+.player-avatar { width: 76px; height: 76px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); background: #70ebd507; color: var(--accent); font: 26px var(--mono); overflow: hidden; }
+.player-avatar img, .spectator-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.player-name { font-size: 18px; overflow-wrap: anywhere; text-align: center; }
+.profile-link { border: 0; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; color: inherit; background: none; }
+.profile-link:hover .player-name { color: var(--accent); }
+.profile-link.inline { flex-direction: row; gap: 8px; font-size: 13px; }
+.ready-badge { color: var(--muted); font: 10px var(--mono); padding: 5px 14px; border: 1px solid var(--line); border-radius: 3px; }
+[data-state="ready"] .ready-badge { color: var(--accent); border-color: #70ebd550; }
+.versus-mark { text-align: center; color: var(--accent); font: italic 25px var(--mono); text-shadow: 0 0 30px #70ebd550; }
+.lobby-hint { text-align: center; color: var(--muted); font-size: 13px; padding: 18px; margin-bottom: 0; min-height: 60px; }
+.lobby-hint strong { color: var(--accent); }
+.spectators { padding: 24px 28px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+.spectators header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.spectators h2 { font-size: 14px; margin: 0; }
+.count-badge { color: var(--accent); background: #70ebd510; padding: 1px 8px; border-radius: 3px; font: 10px/1.8 var(--mono); }
+.spectator-list { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.spectator-list > .empty { color: var(--muted); font-size: 12px; }
+.spectator-chip { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 3px; }
+.spectator-chip[data-me="true"] { border-color: #70ebd560; }
+.spectator-avatar { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; overflow: hidden; background: #70ebd515; color: var(--accent); }
+.lobby-actions { width: min(1000px, calc(100% - 96px)); margin: 24px auto 0; display: flex; justify-content: space-between; gap: 16px; }
+#readyBtn { min-width: 170px; }
+#readyBtn[aria-pressed="true"] { background: #70ebd514; color: var(--accent); }
+.swap-banner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 22px; margin-top: 20px; border: 1px solid #f4c57b50; background: #3b2b1ad9; border-radius: 4px; font-size: 13px; }
+.swap-actions { display: flex; gap: 8px; flex: none; }
+.profile-dialog { width: min(850px, calc(100% - 24px)); height: min(740px, 90svh); padding: 40px 0 0; overflow: hidden; }
+.profile-dialog iframe { width: 100%; height: 100%; border: 0; }
+.profile-dialog-close { position: absolute; top: 5px; right: 10px; width: 32px; height: 32px; border: 0; color: var(--muted); background: transparent; }
+@media (max-width: 600px) { .lobby, .lobby-actions { width: calc(100% - 36px); } .lobby-hero { padding: 24px; } .lobby-hero .status-pill { float: none; margin-bottom: 16px; } .versus { grid-template-columns: 1fr 36px 1fr; } .player-card { min-height: 230px; padding: 24px 10px; gap: 12px; } .player-name { font-size: 14px; } .player-avatar { width: 56px; height: 56px; } .versus-mark { font-size: 16px; } .spectators { padding: 20px; } .swap-banner { flex-direction: column; align-items: flex-start; } #readyBtn { min-width: 130px; } }
